@@ -149,7 +149,6 @@ function CardProfile({ item }) {
   const dueDate = Math.ceil(
     (new Date(item.deadline) - new Date()) / (1000 * 60 * 60 * 24),
   );
-  console.log(typeof dueDate);
 
   return (
     <>
