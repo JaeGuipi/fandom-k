@@ -146,6 +146,10 @@ function CardProfile({ item }) {
 
   const openModal = () => setIsModalOpen(true); // 모달 열기
   const closeModal = () => setIsModalOpen(false); // 모달 닫기
+  const dueDate = Math.ceil(
+    (new Date(item.deadline) - new Date()) / (1000 * 60 * 60 * 24),
+  );
+  console.log(typeof dueDate);
 
   return (
     <>
@@ -170,10 +174,9 @@ function CardProfile({ item }) {
               </DonationAmount>
             </DonationDetails>
             <DaysLeft>
-              {Math.ceil(
-                (new Date(item.deadline) - new Date()) / (1000 * 60 * 60 * 24),
-              )}
-              일 남음
+              {dueDate >= 0
+                ? `${dueDate}일 남음`
+                : `${Math.abs(dueDate)}일 지남`}
             </DaysLeft>
           </DonationInfo>
           <ProgressBarContainer>
