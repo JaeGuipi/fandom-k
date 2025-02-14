@@ -6,6 +6,8 @@
 
 ### 🔗 https://fandom-k-ten.vercel.app/
 
+### <a href="https://github.com/FE-J5/fandom-k">📋 Github 팀 레포지토리</a>
+
 <br />
 
 ## 📝 프로젝트 소개
